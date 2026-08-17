@@ -31,8 +31,7 @@ public class Turtle extends SimpleTurtle
    * @param y the starting y position
    * @param modelDisplayer the thing that displays the model
    */
-  public Turtle (int x, int y, 
-                 ModelDisplay modelDisplayer) 
+  public Turtle (int x, int y, ModelDisplay modelDisplayer) 
   {
     // let the parent constructor handle it
     super(x,y,modelDisplayer);
