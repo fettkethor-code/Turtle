@@ -24,6 +24,8 @@ public class SimpleTurtle
 {
   ///////////////// fields ////////////////////////
   
+  private final double pi = 3.141592;
+
   /** count of the number of turtles created */
   private static int numTurtles = 0;
   
@@ -687,10 +689,64 @@ public class SimpleTurtle
   }
 
   public void polygon(int sides, int size, SimpleTurtle turtle) {
+    penDown();
     for(int i = 0; i < sides; i++) {
       turtle.forward(size);
       turtle.turn(360.0 / sides);
     }
+    penUp();
+  }
+
+  public void circle(int radius, SimpleTurtle turtle) {
+    penDown();
+    for(int i = 0; i < 72; i++) {
+      turtle.forward((int) ((radius * pi) / 72));
+      turtle.turn(5);
+    }
+    penUp();
+  }
+
+  public void letterA(int size) {
+    penDown();
+    int crossLineX;
+    this.turn(20);
+    this.forward(size / 2);
+    crossLineX = this.xPos;
+    this.forward(size / 2);
+    this.turn(140);
+    this.forward(size);
+    this.turn(180);
+    this.forward(size / 2);
+    this.turn(-70);
+    this.forward(this.xPos - crossLineX);
+    this.turn(-70);
+    this.forward(size / 2);
+    penUp();
+  }
+
+  public void letterB(int size) {
+    penDown();
+    this.forward((int) (size * 1.1));
+    this.turnRight();
+    for(int i = 0; i < 2; i++) {
+
+      //it's like this instead of a half-circle so its more bulbous
+      for(int j = 0; j < 9; j++) {
+        this.forward((int) ((size * pi) / 87));
+        this.turn(3);
+      }
+      for(int j = 0; j < 18; j++) {
+        this.forward((int) ((size * pi) / 87));
+        this.turn(7);
+      }
+      for(int j = 0; j < 9; j++) {
+        this.forward((int) ((size * pi) / 87));
+        this.turn(3);
+      }
+      this.forward((int) ((size * pi) / 87));
+      this.turn(180);
+    }
+    penUp();
   }
   
   /**
