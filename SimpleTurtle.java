@@ -685,6 +685,13 @@ public class SimpleTurtle
     g.setColor(infoColor);
     g.drawString(this.toString(),xPos + (int) (width/2),yPos);
   }
+
+  public void polygon(int sides, int size, SimpleTurtle turtle) {
+    for(int i = 0; i < sides; i++) {
+      turtle.forward(size);
+      turtle.turn(360.0 / sides);
+    }
+  }
   
   /**
    * Method to return a string with informaiton 

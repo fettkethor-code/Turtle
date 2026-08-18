@@ -10,12 +10,20 @@ public class Main {
      
     Turtle yertle = new Turtle(world);
     // Add your code here
-    // Section 1
 
-    for(int i = 0; i < 30; i++) {
-        yertle.forward(1);
-        yertle.turn(12);
-    }
+    System.out.println(yertle.getDistance(0, 0));
+    // Section 1
+    yertle.forward(30);
+    yertle.turnRight();
+    yertle.forward(30);
+    yertle.turnRight();
+    yertle.forward(30);
+    yertle.turnRight();
+    yertle.forward(30);
+    yertle.penUp();
+    yertle.forward(20);
+    yertle.penDown();
+    
     // Section 2
     yertle.forward(30);
     yertle.turnRight();
@@ -37,7 +45,7 @@ public class Main {
     yertle.turn(45);
     yertle.forward(17);
     yertle.turn(45);
-    yertle.forward(10);
+    yertle.forward(8);
     yertle.turn(45);
     yertle.forward(17);
     yertle.turn(45);
@@ -55,9 +63,7 @@ public class Main {
      
     Turtle yertle2 = new Turtle(world2);
     // Add your code here
-    yertle2.forward();
-    yertle2.turnRight();
-    yertle2.forward();
+    yertle2.polygon(5, 100, yertle2);
 
     World world3 = new World(true);
     Turtle yertle3 = new Turtle(world3);
