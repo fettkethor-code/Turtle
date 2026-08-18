@@ -22,6 +22,12 @@ public class Main {
 
     gerald.letterB(140);
 
+    System.out.println("turtle1" + turtle1.getBodyColor() + turtle1.getDistance(0, 0));
+    System.out.println("turtle2" + turtle2.getBodyColor() + turtle2.getDistance(0, 0));
+    System.out.println("turtle3" + turtle3.getBodyColor() + turtle3.getDistance(0, 0));
+    System.out.println("gerald" + gerald.getBodyColor() + gerald.getDistance(0, 0));
+
+
     world.setVisible(true);
   }
 }
